@@ -1,0 +1,250 @@
+body {
+    font-family: "Rubik";
+    font-weight: 300;
+}
+
+p {
+    color: grey;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.title {
+    font-style: italic;
+    margin: 0;
+}
+
+
+
+/* header */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: inherit;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    max-width: 30px;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__menu li {
+    list-style-type: none;
+}
+
+.header__menu a {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transition: .4s;
+    font-weight: 500;
+}
+
+.header__menu a:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    transition: .4s;
+    background: rgb(160, 133, 89);
+}
+
+.header__menu a:hover:before {
+    width: 100%;
+}
+
+
+.main {
+    background: url('../img/shedule_bg.jpg') center center / contain repeat;
+}
+
+.main .container {
+    padding: 40px 10px;
+}
+
+.main__wrapper {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+
+
+/* Promo */
+.promo {
+    background: url('../img/promo.png') 65% 0% / cover no-repeat;
+    height: 110vh;
+    padding: 0;
+    margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+}
+
+.promo__title {
+    font-size: 4.5rem;
+    font-family: "Great Vibes";
+    color: #fff;
+    padding-left: 20px;
+    padding-bottom: 50px;
+}
+
+/* Schedule */
+.schedule {
+    margin-top: 40px;
+}
+
+.schedule__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* Event */
+.event {
+    max-width: 420px;
+}
+
+.event__name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.event span {
+    color: rgb(160, 133, 89);
+    font-weight: 600;
+}
+
+.event a {
+    text-decoration: none;
+    color: #61076d;
+    font-weight: 600;
+    transition: .4s;
+}
+
+.event a:hover {
+    opacity: .6;
+}
+
+
+/* Gift */
+.gift {
+    background: rgb(243, 240, 240);
+}
+
+.gift h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gift ul {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    gap: 10px;
+    padding: 0;
+}
+
+.gift li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.gift li img {
+    width: 50px;
+}
+
+.gift li span {
+    font-size: 18px;
+    text-align: center;
+}
+
+.gift__flowers {
+    position: relative;
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+}
+
+.gift__flowers .arrow {
+    width: 20px;
+}
+
+.gift__flowers div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Footer */
+.footer {
+    background: rgb(57, 56, 56);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer__text {
+    font-family: "Great Vibes";
+    font-size: 24px;
+    line-height: 1.5em;
+}
+
+
+
+
+
+
+@media (min-width: 768px) { 
+    .header .logo {
+        max-width: 80px;
+    }
+    
+    .promo__title {
+        font-size: 8rem;
+    }
+
+    .schedule__wrapper {
+        gap: 20px;
+    }
+
+    .gift ul {
+        grid-template-columns: 400px repeat(auto-fill, minmax(auto, 200px));
+    }
+}
